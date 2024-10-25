@@ -27,8 +27,8 @@ public class Humain {
 		parler("Bonjour ! Je m'appelle "+this.nom+" et j'aime boire du "+ this.boisson_pref);	
 	}
 	
-	 public void boire(String boisson) {
-		 parler("Mmmm, un bon verre de "+boisson+"! GLOUPS !");
+	 public void boire() {
+		 parler("Mmmm, un bon verre de "+this.boisson_pref+"! GLOUPS !");
 	}
 	 
 	 public void acheter(String bien, int prix) {
@@ -42,11 +42,11 @@ public class Humain {
 		} 
 	}
 	 
-	 private void gagnerArgent(int gain) {
+	 protected void gagnerArgent(int gain) {
 		 this.argent += gain;
 	}
 	 
-	 private void perdreArgent(int perte) {
+	 protected void perdreArgent(int perte) {
 		 this.argent -= perte;
 		
 	}
