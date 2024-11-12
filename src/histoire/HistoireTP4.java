@@ -13,12 +13,18 @@ public class HistoireTP4 {
 //		marco.seFaireExtorquer();
 //		marco.recevoir(15);
 //		marco.boire();
-//		Yakuza yaku = new Yakuza("Yaku Le Noir", "Whisky", 30, "Warsong");
+		Yakuza yaku = new Yakuza("Yaku Le Noir", "Whisky", 45, "Warsong");
 //		yaku.direBonjour();
 //		yaku.extorquer(marco);
-		Ronin roro = new Ronin("Roro", "shochu", 60);
-		roro.direBonjour();
-		roro.donner(marco);
+//		yaku.extorquer(marco); //il faut extorquer marco 3 fois au minimum pour que la reputaion(yakuza) > (honneur(ronin)*2)
+//		yaku.extorquer(marco);
+		Ronin roro = new Ronin("Roro", "shochu", 9);
+//		roro.direBonjour();
+//		roro.donner(marco);
+		roro.provoquer(yaku);
+		
+		
+		
 		
 	}
 
