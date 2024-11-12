@@ -1,4 +1,4 @@
-package histoire;
+package personnages;
 
 public class Yakuza extends Humain {
 	private String clan;

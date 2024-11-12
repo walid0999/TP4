@@ -1,4 +1,4 @@
-package histoire;
+package personnages;
 
 public class Ronin extends Humain{
 	private int honneur = 1;
@@ -23,7 +23,7 @@ public class Ronin extends Humain{
 		this.honneur +=1;
 	}
 	
-	protected void provoquer(Yakuza adversaire) {
+	public void provoquer(Yakuza adversaire) {
 		int force = this.honneur * 2;
 		System.out.println("Je t'ai retrouvé vermine, tu vas payer pour ce que tu as fait à ce pauvre marchand!");
 		if (force >= adversaire.getReputation()) {

@@ -1,9 +1,11 @@
-package histoire;
+package personnages;
 
 public class Humain {
 	private String nom;
 	private String boisson_pref;
 	private int argent;
+	protected int nbConnaissance=0;
+	protected Humain[] memoire = new Humain[30]; 
 	
 	public Humain(String nom, String boisson_pref, int argent) {
 		this.nom =nom;
@@ -50,6 +52,49 @@ public class Humain {
 		 this.argent -= perte;
 		
 	}
+	 //TP5
+	 
+	 public void faireConnaissanceAvec(Humain autreHumain) {
+		 direBonjour();
+		 autreHumain.repondre(this);
+		 memoriser(autreHumain);
+	 }
+	 
+	 
+	 
+	 private void repondre(Humain humain) {
+		 direBonjour();
+		 memoriser(humain);
+	 }
+	 
+	 private void memoriser(Humain humain) {
+		 if(getNbConnaissance()>=30) {
+			 for(int i=0; i<29; i++) {
+				 this.memoire[i] = this.memoire[i+1];
+			 }
+		 }
+		this.memoire[getNbConnaissance()]=humain;
+		incrementerNbConnaissance();
+	 }
+	 
+	 // focntions supp
+	 // {
+	 private int getNbConnaissance() {
+		 return this.nbConnaissance;
+	 }
+	 
+	 private void incrementerNbConnaissance() {
+		 this.nbConnaissance+=1;
+		
+	}
+	// }
+	 public void listerConnaissance() {
+		 for(int i=0; i<getNbConnaissance(); i++) {
+			 System.out.println("Je connais beaucoup de monde dont : "+this.memoire[i]);
+		 }
+		
+	}
+	 
 	 
 	 
 	 
