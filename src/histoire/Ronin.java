@@ -9,9 +9,10 @@ public class Ronin extends Humain{
 	
 	public void donner(Commercant beneficiaire) {
 		int argent_donne = (int) (getArgent()*0.1);
+		System.out.println(beneficiaire.getNom()+" prend ces "+argent_donne+" sous." );
 		beneficiaire.gagnerArgent(argent_donne);
 		perdreArgent(argent_donne);
-		System.out.println(beneficiaire.getNom()+" prend ces "+ );
+		beneficiaire.recevoir(argent_donne);
 		
 		
 	}

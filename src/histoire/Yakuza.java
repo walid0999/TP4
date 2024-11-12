@@ -16,7 +16,7 @@ public class Yakuza extends Humain {
 		System.out.println(victime.getNom()+", si tu tiens à la vie donne moi ta bourse !");
 		victime.seFaireExtorquer();
 		this.clan += 1;
-		System.out.println("J'ai piqué "+argent_gagné+" sous de "+victime.getNom()+
+		System.out.println("J'ai piqué les "+argent_gagné+" sous de "+victime.getNom()+
 				", ce qui me fait "+getArgent()+" sous dans ma poche. Hi ! Hi !");
 		
 	}
